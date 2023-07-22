@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../images/logo.png"
+import { AuthContext } from '../../providers/AuthProvider';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user)
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+
+            })
+            .catch(error => console.log(error))
+    }
     const navItems = <>
         <li><Link to="/">Home</Link> </li>
         <li> <Link to="/blog">Blog</Link> </li>
         {/* <li> <Link to="/login">Login</Link> </li> */}
-        {/* {user?.email ? <>
-            <li><Link to="/addToy">Add A Toy</Link></li>
-            <li><Link to="/allToy">All Toys</Link></li>
-            <li><Link to="/myToy">My Toys</Link></li>
+        {user?.email ? <>
+            <li><Link to="/addToy">Add A College</Link></li>
+            {/* <li><Link to="/allToy">All Toys</Link></li> */}
+            <li><Link to="/myToy">My College</Link></li>
             <li><button onClick={handleLogOut}>Log out</button></li>
         </>
             : <>
-                <li><Link to="/allToy">All Toys</Link></li>
+                <li><Link to="/allToy">Admission</Link></li>
                 <li> <Link to="/login">Login</Link> </li></>
 
-        } */}
+        }
 
     </>
     return (
@@ -48,9 +59,9 @@ const Navbar = () => {
                 {/* {
                     user?.photoURL ? <img style={{ width: '50px', marginRight: "15px", borderRadius: '50%' }} src={user.photoURL} alt="" /> : <></>
                 } */}
-                {/* {
+                {
                     user?.photoURL ? <img style={{ width: '50px', marginRight: "15px", borderRadius: '50%' }} src={user.photoURL} alt="" /> : <FaUserCircle style={{ fontSize: '30px' }}></FaUserCircle>
-                } */}
+                }
             </div>
         </div>
     );
