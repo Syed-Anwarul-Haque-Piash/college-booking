@@ -3,6 +3,7 @@ import Main from "../layouts/Main";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
+import AddCollege from "../../pages/AddCollege/AddCollege";
 const router=createBrowserRouter([
     {
         path: '/',
@@ -20,6 +21,10 @@ const router=createBrowserRouter([
                 path:'/signup',
                 element: <Register></Register>
             },
+            {
+                path: '/addcollege',
+                element: <AddCollege></AddCollege>
+            }
         ]
     }
 ])

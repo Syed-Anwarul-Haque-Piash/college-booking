@@ -19,7 +19,7 @@ const Navbar = () => {
         <li> <Link to="/blog">Blog</Link> </li>
         {/* <li> <Link to="/login">Login</Link> </li> */}
         {user?.email ? <>
-            <li><Link to="/addToy">Add A College</Link></li>
+            <li><Link to="/addcollege">Add College</Link></li>
             {/* <li><Link to="/allToy">All Toys</Link></li> */}
             <li><Link to="/myToy">My College</Link></li>
             <li><button onClick={handleLogOut}>Log out</button></li>
