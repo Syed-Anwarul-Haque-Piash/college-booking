@@ -1,5 +1,7 @@
 import React from 'react';
 import Colleges from '../Colleges/Colleges';
+import Gallery from '../Gallery/Gallery';
+import NewsLetter from '../NewsLetter/NewsLetter';
 
 const Home = () => {
     return (
@@ -16,7 +18,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Gallery></Gallery>
             <Colleges></Colleges>
+            <NewsLetter></NewsLetter>
         </div>
     );
 };

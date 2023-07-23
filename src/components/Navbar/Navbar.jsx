@@ -16,16 +16,18 @@ const Navbar = () => {
     }
     const navItems = <>
         <li><Link to="/">Home</Link> </li>
-        <li> <Link to="/blog">Blog</Link> </li>
+        {/* <li> <Link to="/blog">Blog</Link> </li> */}
         {/* <li> <Link to="/login">Login</Link> </li> */}
         {user?.email ? <>
-            <li><Link to="/addcollege">Add College</Link></li>
+            {/* <li><Link to="/addcollege">Add College</Link></li> */}
             {/* <li><Link to="/allToy">All Toys</Link></li> */}
             <li><Link to="/mycollege">My College</Link></li>
+            <li><Link to="/admission">Admission</Link></li>
             <li><button onClick={handleLogOut}>Log out</button></li>
+            
         </>
             : <>
-                <li><Link to="/allToy">Admission</Link></li>
+               
                 <li> <Link to="/login">Login</Link> </li></>
 
         }
