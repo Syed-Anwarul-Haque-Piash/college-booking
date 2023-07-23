@@ -29,7 +29,7 @@ const router=createBrowserRouter([
             {
                 path: 'singlecollege/:id',
                 element:<SingleCollege></SingleCollege>,
-                //loader: ({params})=>fetch(`https://toy-market-server-sepia.vercel.app/alltoys/${params.id}`)
+                loader: ({params})=>fetch(`http://localhost:5000/allcollege/${params.id}`)
             },
         ]
     }
