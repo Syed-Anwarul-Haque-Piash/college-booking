@@ -21,7 +21,7 @@ const Navbar = () => {
         {user?.email ? <>
             <li><Link to="/addcollege">Add College</Link></li>
             {/* <li><Link to="/allToy">All Toys</Link></li> */}
-            <li><Link to="/myToy">My College</Link></li>
+            <li><Link to="/mycollege">My College</Link></li>
             <li><button onClick={handleLogOut}>Log out</button></li>
         </>
             : <>
