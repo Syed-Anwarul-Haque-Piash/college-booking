@@ -8,25 +8,25 @@ const AddCollege = () => {
     
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        // fetch('https://toy-market-server-sepia.vercel.app/addtoy', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-            // .then(res => res.json())
-            // .then(data => {
-            //     console.log(data)
-            //     if(data.insertedId){
-            //         Swal.fire({
-            //             title: 'Success!',
-            //             text: 'Toy Added Successfully',
-            //             icon: 'success',
-            //             confirmButtonText: 'Cool'
-            //           })
-            //     }
-            // })
+        fetch('http://localhost:5000/addcollege', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'College Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
+                }
+            })
         console.log(data)
     };
     return (
@@ -48,7 +48,7 @@ const AddCollege = () => {
                     {/* <input type="text" {...register("Seller Name")} placeholder="Seller Name" name="name" className="input input-bordered" /> */}
                     <input
                         className="input input-bordered"
-                        {...register("admission date", { required: true })}
+                        {...register("date", { required: true })}
                         placeholder="Admission Date"
                         type='date'
                     />

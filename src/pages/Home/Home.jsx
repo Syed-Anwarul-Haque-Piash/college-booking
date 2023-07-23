@@ -1,4 +1,5 @@
 import React from 'react';
+import Colleges from '../Colleges/Colleges';
 
 const Home = () => {
     return (
@@ -6,6 +7,7 @@ const Home = () => {
             <div className="hero min-h-screen" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/portrait-female-teacher-holding-notepad-green_140725-149620.jpg')` }}>
                 <div className=""></div>
                 {/* hero-overlay bg-opacity-60 */}
+                
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold text-black">Offering access to high-quality <br />education for everyone</h1>
@@ -14,6 +16,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Colleges></Colleges>
         </div>
     );
 };

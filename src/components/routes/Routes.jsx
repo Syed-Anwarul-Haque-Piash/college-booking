@@ -4,6 +4,7 @@ import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import AddCollege from "../../pages/AddCollege/AddCollege";
+import SingleCollege from "../../pages/SingleCollege/SingleCollege";
 const router=createBrowserRouter([
     {
         path: '/',
@@ -24,7 +25,12 @@ const router=createBrowserRouter([
             {
                 path: '/addcollege',
                 element: <AddCollege></AddCollege>
-            }
+            },
+            {
+                path: 'singlecollege/:id',
+                element:<SingleCollege></SingleCollege>,
+                //loader: ({params})=>fetch(`https://toy-market-server-sepia.vercel.app/alltoys/${params.id}`)
+            },
         ]
     }
 ])
