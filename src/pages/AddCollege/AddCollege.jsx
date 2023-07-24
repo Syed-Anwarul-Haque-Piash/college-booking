@@ -8,7 +8,7 @@ const AddCollege = () => {
     
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/addcollege', {
+        fetch('https://college-server-nine.vercel.app/addcollege', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

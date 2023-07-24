@@ -6,7 +6,7 @@ const MyCollege = () => {
     //useTitle('My Toys');
     const [colleges, setColleges] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/mytoys/${user?.email}`)
+        fetch(`https://college-server-nine.vercel.app/mytoys/${user?.email}`)
             .then(res => res.json())
             .then(data => setColleges(data))
     }, [user])

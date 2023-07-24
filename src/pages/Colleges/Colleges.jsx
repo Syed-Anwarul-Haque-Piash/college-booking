@@ -5,7 +5,7 @@ const Colleges = () => {
     const [colleges,setColleges]=useState([]);
     const [active,setActive]=useState("cricket");
     useEffect(()=>{
-        fetch('http://localhost:5000/allcollege')
+        fetch('https://college-server-nine.vercel.app/allcollege')
         .then(res=>res.json())
         .then(data=>setColleges(data))
     },[])

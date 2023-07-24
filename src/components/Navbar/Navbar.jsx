@@ -27,7 +27,8 @@ const Navbar = () => {
             
         </>
             : <>
-               
+                <li><Link to="/mycollege">My College</Link></li>
+                 <li><Link to="/admission">Admission</Link></li>
                 <li> <Link to="/login">Login</Link> </li></>
 
         }
